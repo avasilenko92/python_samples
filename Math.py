@@ -25,5 +25,6 @@ def main():
     output = str(multiplicationResult) + " / " + str(subtractionResult) + " = " + str(divisionResult)
     print(output)
 
+
 if __name__ == '__main__':
     main()
