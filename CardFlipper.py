@@ -2,6 +2,8 @@
 set1 = "0100110"
 set2 = "01001100111"
 set3 = "100001100101000"
+#[11, 10, 6, 0, 1, 2, 3, 4, 5, 7, 8, 9, 12, 13, 14]
+#0 1 2 3 4 6 5 7 8 11 10 9 12 13 14
 
 gameSet = []
 rawInput = set3
@@ -37,6 +39,21 @@ def flipCard(chosenIndex):
 
 
 def solve():
+    global gameSet
+    #How to solve:
+    #0. Check for odd number of 1s (winnable)
+    ones = 0
+    for i, x in enumerate(gameSet):
+        if x == "1":
+            ones += 1
+    if ones % 2 != 1:
+        print("Unsolvable, " + str(ones) + " ones found")
+        exit(0)
+
+
+    #1. Find yellow card
+    #2. ???
+    #3. Solved!
     print("Solved!")
     exit(0)
 
